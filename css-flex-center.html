@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>使用 Flex 实现不定宽高元素水平垂直居中</title>
+    <style type="text/css" media="screen">
+      .father {
+        width: 600px;
+        height: 400px;
+        background: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .child {
+        width: 83%;
+        height: 79%;
+        background:green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="child"></div>
+    </div>
+  </body>
+</html>
