@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PWA测试页面</title>
+    <style>
+      * {
+        marign: 0;
+        padding: 0;
+      }
+      #box {
+        margin: 30px auto;
+        width: 280px;
+        height: 120px;
+        background: #eee;
+        text-align: center;
+        line-height: 120px;
+        box-shadow: 1px 1px 10px 2px #ccc;
+        color: #ff9000;
+      }
+      #box #age {
+        font-size: 27px;
+        color: #ff8000;
+      }
+      .img-box {
+        width: 280px;
+        margin: 0 auto;
+      }
+      img {
+        width: 100%;
+      }
+    </style>
+    <link rel="manifest" href="/mydemo/pwa/manifest.json">
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Weather PWA">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+  </head>
+  <body>
+    <div id="box">
+      我今年 <span id="age"></span> 岁啦。
+    </div>
+    <div class="img-box">
+      <img src="./images/1.png" alt="">
+      <img src="./images/2.png" alt="">
+    </div>
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./app.js" charset="utf-8"></script>
+  </body>
+</html>
