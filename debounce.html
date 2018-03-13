@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>debounce test</title>
+    <style>
+      .block {
+        width: 81%;
+        height: 6000px;
+        margin: 0 auto;
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block"></div>
+    <script charset="utf-8">
+      var a = {
+       a: 1
+      };
+
+      // window.addEventListener('scroll', function() {
+      //   console.log(i++);
+      // }, false);
+
+      var debounce = function(fn, delay) {
+        var timer = null;
+
+        return function() {
+
+          var con = this;
+          var args = arguments;
+
+          // console.log(con);
+          // console.log(args);
+
+          clearTimeout(timer);
+
+          timer =  setTimeout(function() {
+            fn.apply(con, args);
+          }, delay)
+        }
+      }
+
+      var b = function(x) {
+        x.a = x.a + 1;
+        console.log(x.a);
+      }
+
+      window.addEventListener('scroll', debounce(b, 500).bind(this, a), false);
+
+    </script>
+  </body>
+</html>
